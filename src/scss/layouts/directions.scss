@@ -1,0 +1,44 @@
+.directions {
+    padding: 80px 0;
+
+    &__content {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__text-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-card-1 {
+        background: url('/assets/img/cart-1.png');
+        background-repeat: no-repeat;
+    }
+
+    &-card-2 {
+        background: url('/assets/img/cart-2.png');
+        background-repeat: no-repeat;
+    }
+
+    &-card-3 {
+        background: url('/assets/img/cart-3.png');
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
+    }
+
+    &__content-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__button {
+        border-radius: 4px;
+        padding: 16px 36px;
+        width: 244px;
+        height: 52px;
+    }
+}

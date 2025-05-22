@@ -1,0 +1,87 @@
+.about {
+    flex: 1 1 auto;
+    padding: 100px 0;
+
+    &__inner {
+        display: flex;
+        padding: 0px 16px;
+
+
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__img {
+        position: relative;
+        margin-right: 120px;
+
+        img {
+            max-width: 480px;
+            margin-bottom: 50px;
+        }
+
+
+
+
+    }
+
+    &__content {
+        padding: 64px 0;
+    }
+
+    &__play {
+        position: absolute;
+        // left: 281px;
+        // bottom: 180px;
+        top: 60%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+        width: 60px;
+        /* Размер иконки play */
+    }
+
+    &__play:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 0.83333;
+        color: #f2be22;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 1.2;
+        color: #18121e;
+        margin-bottom: 40px;
+    }
+
+    &__descr {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #18121e;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        border-radius: 4px;
+        padding: 16px 36px;
+        width: 200px;
+        height: 52px;
+    }
+
+    &__img-mobile {
+        display: none;
+    }
+}

@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "NEXT-ART";
+  src: url("../assets/fonts/NEXT-ART_Regular.woff2") format("woff2"), url("../assets/fonts/NEXT-ART_Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NEXT-ART";
+  src: url("../assets/fonts/NEXT-ART_Bold.woff2") format("woff2"), url("../assets/fonts/NEXT-ART_Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+/* Box model reset */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: "next-art";
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* Common elements */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+img, img + svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form elements */
+input,
+textarea,
+button,
+input[type=submit],
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+input:focus, input:active {
+  outline: none;
+}
+input[type=file] {
+  max-width: 100%;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+button:focus, input[type=submit]:focus, button:active, input[type=submit]:active {
+  outline: none;
+}
+button::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: black;
+}
+
+* {
+  font-family: "next-art";
+}/*# sourceMappingURL=main.css.map */

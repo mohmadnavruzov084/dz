@@ -1,0 +1,225 @@
+.adventure-card {
+    position: relative;
+    border-radius: 32px;
+    width: 380px;
+    height: 500px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.rating {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border-radius: 4px 0 0 4px;
+    padding: 4px 8px;
+    width: 65px;
+    height: 32px;
+    backdrop-filter: blur(2px);
+    background: rgba(253, 253, 253, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #fdfdfd;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+    color: #fdfdfd;
+    margin: 4px 0 0;
+}
+
+.price {
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 86px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #fdfdfd;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    border-radius: 0 0 32px 32px;
+    width: 380px;
+    height: 90px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 32px;
+    box-sizing: border-box;
+}
+
+/* Стили для контейнера на десктопах (≥1200px) */
+@media (min-width: 1200px) {
+    .directions__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        justify-content: center;
+        max-width: 1240px;
+        margin: 0 auto;
+        overflow: visible;
+    }
+
+    .adventure-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
+
+/* Стили для мобильного слайдера (<1200px) */
+@media (max-width: 1199.98px) {
+    .directions__content {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 16px;
+        padding: 16px;
+        cursor: grab;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .adventure-card {
+        scroll-snap-align: start;
+        flex: 0 0 auto;
+    }
+
+    /* Плавный скролл для мыши */
+    .directions__content:active {
+        cursor: grabbing;
+    }
+
+    /* Скрываем scrollbar */
+    .directions__content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .directions__content {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Индикатор прокрутки */
+    .directions__container {
+        position: relative;
+    }
+
+    .directions__container::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .directions__container::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 33%;
+        background: #fff;
+        z-index: 1;
+        animation: scrollIndicator 3s infinite ease-in-out;
+    }
+
+    @keyframes scrollIndicator {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(200%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .adventure-card {
+        width: 285px;
+        height: 420px;
+        /* Можно уменьшить высоту пропорционально */
+    }
+
+    .content {
+        width: 285px;
+        height: 80px;
+        /* Уменьшаем высоту контейнера с контентом */
+        padding: 20px 24px;
+        /* Корректируем отступы */
+        display: flex;
+        align-self: center;
+    }
+
+    .title {
+        font-size: 18px;
+        /* Чуть меньший размер шрифта */
+        padding-top: 10px;
+    }
+
+    .price {
+        width: 76px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #fdfdfd;
+    }
+
+    .rating {
+        top: 30px;
+        /* Чуть ниже от верхнего края */
+        width: 60px;
+        height: 28px;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    .image {
+        height: 65%;
+        /* Корректируем соотношение изображения */
+    }
+}
+

@@ -1,0 +1,21 @@
+@use 'base/fonts.scss';
+@use 'base/reset.scss';
+@use 'base/base.scss';
+@use 'components/buttons.scss';
+@use 'components/cart.scss';
+@use 'components/swiper.scss';
+@use 'layouts/header.scss';
+@use 'layouts/travel.scss';
+@use 'media/media.scss';
+@use 'layouts/about.scss';
+@use 'layouts/proposal.scss';
+@use 'layouts/directions.scss';
+@use 'layouts/photo.scss';
+
+
+
+
+* {
+    font-family: "Nunito Sans", sans-serif;
+
+}

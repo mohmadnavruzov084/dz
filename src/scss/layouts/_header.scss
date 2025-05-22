@@ -1,0 +1,191 @@
+.header {
+    background: url(../assets/img/header-bg.png) no-repeat center center / cover;
+    height: 100vh;
+
+    &__top-inner {
+        padding: 16px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        flex: 1;
+        align-items: center;
+    }
+
+    &__nav {
+        margin-right: auto;
+        display: flex;
+        gap: 49px;
+        align-items: center;
+
+        &-list {
+            display: flex;
+            gap: 24px;
+        }
+
+        &-link {
+            font-weight: 600;
+            font-size: 18px;
+            color: #fdfdfd;
+        }
+
+        &-link:hover {
+
+            color: #f2be22;
+        }
+    }
+
+    &__body {
+        padding: 463px 0;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #fdfdfd;
+        font-family: 'NEXT-ART';
+        padding-bottom: 41px;
+    }
+
+    &__progrmam {
+        display: flex;
+        justify-content: space-between;
+
+        margin: 0 auto;
+        border-radius: 10px;
+        width: 1180px;
+        height: 161px;
+        backdrop-filter: blur(6px);
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+
+        &-btn {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.01em;
+            color: #1a3e3e;
+            border-radius: 4px;
+            padding: 16px 36px;
+            width: 213px;
+            height: 52px;
+            background: #fdfdfd;
+
+        }
+
+
+    }
+
+    &__select {
+        appearance: none;
+        /* Убираем стандартный стиль */
+        -webkit-appearance: none;
+        /* Для Safari и Chrome */
+        -moz-appearance: none;
+        /* Для Firefox */
+
+        padding: 16px;
+        /* Отступы */
+        border: 1px solid #ccc;
+        /* Граница */
+        border-radius: 4px;
+        /* Скругление углов */
+        // background-color: white;
+        /* Фон */
+        font-size: 16px;
+        /* Размер шрифта */
+        color: #fdfdfd;
+        /* Цвет текста */
+        cursor: pointer;
+        /* Курсор-указатель */
+
+        /* Кастомная стрелка */
+        background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2475 6.6574L10 12.7474L3.7525 6.6574C3.64088 6.54837 3.49103 6.48733 3.335 6.48733C3.17897 6.48733 3.02912 6.54837 2.9175 6.6574C2.86345 6.71036 2.82052 6.77356 2.7912 6.84332C2.76189 6.91308 2.74679 6.98798 2.74679 7.06365C2.74679 7.13932 2.76189 7.21422 2.7912 7.28398C2.82052 7.35374 2.86345 7.41694 2.9175 7.4699L9.56375 13.9499C9.68047 14.0637 9.83701 14.1273 10 14.1273C10.163 14.1273 10.3195 14.0637 10.4362 13.9499L17.0825 7.47115C17.1369 7.41816 17.1802 7.35479 17.2097 7.2848C17.2393 7.21481 17.2545 7.13962 17.2545 7.06365C17.2545 6.98768 17.2393 6.91248 17.2097 6.8425C17.1802 6.77251 17.1369 6.70914 17.0825 6.65615C16.9709 6.54712 16.821 6.48608 16.665 6.48608C16.509 6.48608 16.3591 6.54712 16.2475 6.65615V6.6574Z" fill="%23FDFDFD"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+        /* Уменьшаем размер иконки */
+        min-width: 270px;
+    }
+
+    &__option {
+        padding: 10px;
+        /* Отступы для опций */
+        background-color: black;
+        /* Фон опций */
+        color: #333;
+        /* Цвет текста опций */
+    }
+
+
+
+    .custom-date-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    /* Стили для фейкового инпута */
+    .fake-input {
+        padding: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #fdfdfd;
+        
+        font-size: 16px;
+        cursor: pointer;
+        width: 270px;
+        box-sizing: border-box;
+    }
+
+    /* Стили для настоящего инпута даты */
+    .real-date-input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    /* Иконка календаря */
+    .custom-date-icon {
+        position: absolute;
+        right: 16px;
+        top: 26px;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        pointer-events: none;
+    }
+
+
+
+    &__progrmam-descr {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #fdfdfd;
+        padding: 8px;
+
+
+    }
+
+    &__consultation-btn {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+        width: 100%;
+    }
+
+}
